@@ -37,7 +37,7 @@ public class PolicialSQL {
     public void insertPolicial(PolicialPojo pojo) {
         try {
             connected();
-            String sql = "Insert into Staff values( " + pojo.getId() + ",'" + pojo.getNome() + "'," + pojo.getIdade() + "," + pojo.getVcorrida() + "," + pojo.getVapoio() + "," + pojo.getVbarra() + "," + pojo.getVabdom() + "," + pojo.getMcorrida() + "," + pojo.getMapoio() + "," + pojo.getMbarra() + "," + pojo.getMabdom() + "," + pojo.getMediafinal() + ")";
+            String sql = "Insert into Staff values( " + pojo.getId() + ",'" + pojo.getNome() + "'," + pojo.getIdade() + "," + pojo.getVcorrida() + "," + pojo.getVapoio() + "," + pojo.getVbarra() + "," + pojo.getVabdom() + "," + pojo.getMcorrida() + "," + pojo.getMapoio() + "," + pojo.getMbarra() + "," + pojo.getMabdom() + "," + pojo.getMediafinal() + ",'" + pojo.getDate() + "')";
             System.out.println(sql);
             statement.executeUpdate(sql);
             closed();
@@ -53,6 +53,7 @@ public class PolicialSQL {
             ResultSet rs = statement.executeQuery("Select * from Staff");
             while (rs.next()) {
                 PolicialPojo pojo = new PolicialPojo();
+
                 pojo.setId(rs.getInt(1));
                 pojo.setNome(rs.getString(2));
                 pojo.setIdade(rs.getInt(3));
@@ -65,6 +66,7 @@ public class PolicialSQL {
                 pojo.setMbarra(rs.getInt(10));
                 pojo.setMabdom(rs.getInt(11));
                 pojo.setMediafinal(rs.getInt(12));
+                pojo.setDate(rs.getString(13));
                 list.add(pojo);
                 System.out.println(String.valueOf(list));
             }
@@ -96,6 +98,7 @@ public class PolicialSQL {
                 pojo.setMbarra(rs.getInt(10));
                 pojo.setMabdom(rs.getInt(11));
                 pojo.setMediafinal(rs.getInt(12));
+                pojo.setDate(rs.getString(13));
                 list.add(pojo);
             }
             return list;

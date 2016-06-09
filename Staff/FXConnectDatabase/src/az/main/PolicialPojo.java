@@ -1,8 +1,11 @@
 package az.main;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-public class PolicialPojo implements Serializable  {
+public class PolicialPojo implements Serializable {
 
     private int id;
     private String nome;
@@ -17,24 +20,37 @@ public class PolicialPojo implements Serializable  {
     private double mabdom;
 //    private Date Date;
     private double mediafinal;
-   StaffHomem Homem = new StaffHomem();
+    private String date;
+    StaffHomem Homem = new StaffHomem();
+
     public PolicialPojo() {
 
+        this.date = getDateTime();
+
+        System.out.println(this.date);
     }
 
-    public PolicialPojo(int id, String nome, int idade, int vcorrida, int vapoio, int vbarra, int vabdom, int mcorrida, int mapoio, int mbarra, int mabdom,int mediafinal) {
+    private String getDateTime() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date data = new Date();
+        return dateFormat.format(data);
+    }
+
+    public PolicialPojo(int id, String nome, int idade, int vcorrida, int vapoio, int vbarra, int vabdom, int mcorrida, int mapoio, int mbarra, int mabdom, int mediafinal, String date) {
         this.id = id;
-        this.idade = idade; 
+        this.idade = idade;
         this.nome = nome;
         this.vcorrida = vcorrida;
         this.vapoio = vapoio;
         this.vbarra = vbarra;
         this.vabdom = vabdom;
-        this.mcorrida = Homem.Correr(mabdom,idade);
+        this.mcorrida = Homem.Correr(mabdom, idade);
         this.mapoio = Homem.Apio(mapoio, idade);
         this.mbarra = Homem.barra(mbarra, idade);
         this.mabdom = Homem.abdom(mabdom, idade);
-        this.mediafinal = ((this.mcorrida + this.mapoio + this.mbarra+ this.mabdom)/4);
+        this.mediafinal = ((this.mcorrida + this.mapoio + this.mbarra + this.mabdom) / 3);
+        this.date = date;
+        System.out.println(this.date);
     }
 //
 //    public PolicialPojo(int id, String nome, int idade, int vcorrida, int vapoio, int vabdom) {
@@ -46,6 +62,14 @@ public class PolicialPojo implements Serializable  {
 //        this.vabdom = vabdom;
 //
 //    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public int getId() {
         return id;
@@ -151,4 +175,4 @@ public class PolicialPojo implements Serializable  {
         this.Homem = Homem;
     }
 
-}   
+}

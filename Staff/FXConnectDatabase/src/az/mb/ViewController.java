@@ -25,7 +25,7 @@ public class ViewController implements Initializable {
     @FXML
     private TableView<PolicialPojo> table;
     @FXML
-    private TableColumn<PolicialPojo, String> nome;
+    private TableColumn<PolicialPojo, String> date, nome;
     @FXML
     private TableColumn<PolicialPojo, Integer> idade, vcorrida, vbarra, vapoio, vabdom, mcorrida, mbarra, mapoio, mabdom;
     @FXML
@@ -77,6 +77,7 @@ public class ViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
 //        id.setCellValueFactory(new PropertyValueFactory<PolicialPojo, Integer>("id"));
+        date.setCellValueFactory(new PropertyValueFactory<PolicialPojo, String>("date"));
         nome.setCellValueFactory(new PropertyValueFactory<PolicialPojo, String>("nome"));
         idade.setCellValueFactory(new PropertyValueFactory<PolicialPojo, Integer>("idade"));
         vcorrida.setCellValueFactory(new PropertyValueFactory<PolicialPojo, Integer>("vcorrida"));

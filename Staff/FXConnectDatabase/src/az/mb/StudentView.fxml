@@ -6,21 +6,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="505.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="az.mb.ViewController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.mb.ViewController">
     <children>
-        <TableView fx:id="table" onMouseClicked="#selectRow" prefHeight="414.0" prefWidth="745.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <TableView fx:id="table" onMouseClicked="#selectRow" prefHeight="500.0" prefWidth="1200.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columns>
-                <TableColumn fx:id="nome" prefWidth="206.0" text="Nome" />
-                <TableColumn fx:id="idade" prefWidth="72.0" text="Idade" />
-                <TableColumn fx:id="vcorrida" prefWidth="86.0" text="V.Corrida" />
-                <TableColumn fx:id="vapoio" prefWidth="88.0" text="V.Apoio" />
-                <TableColumn fx:id="vbarra" prefWidth="84.0" text="V.Barra" />
-                <TableColumn fx:id="vabdom" prefWidth="81.0" text="V.Abdom" />
-                <TableColumn fx:id="mcorrida" prefWidth="83.0" text="M.Corrida" />
-                <TableColumn fx:id="mapoio" prefWidth="100.0" text="M.Apoio" />
-                <TableColumn fx:id="mbarra" prefWidth="100.0" text="M.Barra" />
-                <TableColumn fx:id="mabdom" prefWidth="100.0" text="M.Abdom" />
+                <TableColumn fx:id="date" prefWidth="274.0" text="Date" />
+                <TableColumn fx:id="nome" prefWidth="174.0" text="Nome" />
+                <TableColumn fx:id="idade" minWidth="0.0" prefWidth="66.0" text="Idade" />
+                <TableColumn fx:id="vcorrida" prefWidth="78.0" text="V.Corrida" />
+                <TableColumn fx:id="vapoio" prefWidth="69.0" text="V.Apoio" />
+                <TableColumn fx:id="vbarra" prefWidth="64.0" text="V.Barra" />
+                <TableColumn fx:id="vabdom" prefWidth="77.0" text="V.Abdom" />
+                <TableColumn fx:id="mcorrida" prefWidth="84.0" text="M.Corrida" />
+                <TableColumn fx:id="mapoio" prefWidth="67.0" text="M.Apoio" />
+                <TableColumn fx:id="mbarra" minWidth="0.0" prefWidth="68.0" text="M.Barra" />
+                <TableColumn fx:id="mabdom" prefWidth="79.0" text="M.Abdom" />
                 <TableColumn fx:id="mediafinal" prefWidth="100.0" text="M.F" />
+                
             </columns>
         </TableView>
         <HBox id="HBox" alignment="CENTER" layoutX="27.0" layoutY="428.0" spacing="5.0">
