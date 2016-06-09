@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="614.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.ufms.staff.controller.DialogViewController">
+  <children>
+    <Label layoutX="146.0" layoutY="154.0" text="Nome" />
+    <Label layoutX="146.0" layoutY="196.0" text="Idade:" />
+    <Label layoutX="146.0" layoutY="242.0" text="Corrida" />
+    <Label layoutX="146.0" layoutY="281.0" text="Apoio" />
+      <Label layoutX="146.0" layoutY="326.0" text="Barra" />
+      <Label layoutX="131.0" layoutY="382.0" text="Abdominal" />
+    <TextField fx:id="nome" layoutX="226.0" layoutY="151.0" prefWidth="189.0" promptText="nome do policial" />
+    <TextField id="surnamme" fx:id="idade" layoutX="226.0" layoutY="193.0" prefWidth="189.0" promptText="idade" />
+    <TextField fx:id="vcorrida" layoutX="226.0" layoutY="236.0" prefWidth="189.0" promptText="valor" />
+    <TextField fx:id="vapoio" layoutX="226.0" layoutY="278.0" prefWidth="189.0" promptText="valor" />
+      <TextField fx:id="vbarra" layoutX="226.0" layoutY="323.0" prefWidth="189.0" promptText="valor" />
+
+      <TextField fx:id="vabdom" layoutX="226.0" layoutY="377.0" prefWidth="189.0" promptText="valor" />
+      <HBox layoutX="478.0" layoutY="448.0">
+          <children>
+              <Button id="insert" fx:id="btnInsert" mnemonicParsing="false" onAction="#insert" prefHeight="25.0001220703125" prefWidth="65.0" text="Insert" />
+              <Button id="cancel" fx:id="btnCancel" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="65.0" text="Cancel" />
+          </children>
+      </HBox>
+
+  </children>
+</AnchorPane>

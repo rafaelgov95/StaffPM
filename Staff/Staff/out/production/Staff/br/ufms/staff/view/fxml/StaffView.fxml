@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufms.staff.controller.StaffController">
+    <children>
+        <TableView fx:id="table" onMouseClicked="#selectRow" prefHeight="500.0" prefWidth="1200.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn fx:id="date" editable="false" prefWidth="274.0" text="Date" />
+                <TableColumn fx:id="nome" prefWidth="174.0" text="Nome" />
+                <TableColumn fx:id="idade" minWidth="0.0" prefWidth="66.0" text="Idade" />
+                <TableColumn fx:id="vcorrida" prefWidth="78.0" text="V.Corrida" />
+                <TableColumn fx:id="vapoio" prefWidth="69.0" text="V.Apoio" />
+                <TableColumn fx:id="vbarra" prefWidth="64.0" text="V.Barra" />
+                <TableColumn fx:id="vabdom" prefWidth="77.0" text="V.Abdom" />
+                <TableColumn fx:id="mcorrida" prefWidth="84.0" text="M.Corrida" />
+                <TableColumn fx:id="mapoio" prefWidth="67.0" text="M.Apoio" />
+                <TableColumn fx:id="mbarra" minWidth="0.0" prefWidth="68.0" text="M.Barra" />
+                <TableColumn fx:id="mabdom" prefWidth="79.0" text="M.Abdom" />
+                <TableColumn fx:id="mediafinal" prefWidth="100.0" text="M.F" />
+                
+            </columns>
+        </TableView>
+        <HBox id="HBox" alignment="CENTER" layoutX="27.0" layoutY="428.0" spacing="5.0">
+            <children>
+                <Button id="insert" fx:id="btnInsert" defaultButton="true" mnemonicParsing="false" onAction="#insert" prefHeight="38.0" prefWidth="66.0" text="Add" />
+                <Button id="delete" fx:id="btnDelete" mnemonicParsing="false" onAction="#delete" prefHeight="38.0" prefWidth="66.0" text="Delete" />
+                <Button id="refresh" fx:id="btnRefresh" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="66.0" text="Refresh" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
